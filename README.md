@@ -98,7 +98,7 @@ By default every ion in CHIANTI is searched for blends. Pass `blend_ions` to sea
 
 ## Citation
 
-If you use `tiedfit` in published work, please cite McKevitt and Matthews (in preparation) and the code: [doi:10.5281/zenodo.23728143](https://doi.org/10.5281/zenodo.23728143).
+If you use `tiedfit` in published work, please cite McKevitt and Matthews, "A multi-line fitting technique to improve the measurement precision of scanning-slit solar EUV spectrographs" (in preparation), and the code: [doi:10.5281/zenodo.23728143](https://doi.org/10.5281/zenodo.23728143).
 
 ## Licence
 
