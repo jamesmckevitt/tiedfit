@@ -79,14 +79,14 @@ class Line:
     ratio : float, optional
         Integrated intensity as a fixed fraction of the target's. Only for
         lines of the target's ion; for example an unresolved line whose
-        ratio to the target is known from atomic data. Default: the
+        ratio to the target is known from atomic data. By default the
         amplitude is free.
     strength : float, optional
         Expected intensity relative to the target, used only to decide
         which of two unresolved lines to keep in :func:`merge_unresolved`.
     width : float or "free", optional
-        Gaussian width (sigma) of the line. Default None: the line has the
-        width fitted to the window, which is the target's width. A number
+        Gaussian width (sigma) of the line. By default (None) the line has
+        the width fitted to the window, which is the target's width. A number
         fixes the width, in Angstrom. The fit's `width_bounds`, which are
         in spectral pixels, are converted to Angstrom with the window's
         pixel size, and a fixed width must lie within them. "free" fits a
@@ -120,7 +120,7 @@ class Line:
 @dataclass
 class Window:
     """
-    A spectral window: data around a target line and the lines to fit.
+    Data around a target line, with the lines to fit.
 
     Parameters
     ----------

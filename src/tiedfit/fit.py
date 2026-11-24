@@ -119,7 +119,7 @@ class FitResult:
 
     def intensity(self, window=0, line=0):
         """
-        Integrated intensity of a line: amplitude times width times sqrt(2 pi).
+        Integrated intensity of a line, amplitude times width times sqrt(2 pi).
 
         In the units of the data times Angstrom.
         """

@@ -1,5 +1,5 @@
 """
-The whole method for one ion: calibrate the rest wavelengths, then fit.
+Rest-wavelength calibration and fits of all the lines of one ion.
 """
 
 from __future__ import annotations

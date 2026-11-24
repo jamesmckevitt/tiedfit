@@ -21,8 +21,8 @@ def inverse_variance_mean(velocities, sigmas, mask=None):
         Velocities and their one-sigma uncertainties in km/s, shape
         (n_lines, ...).
     mask : array_like of bool, optional
-        Measurements to use, same shape. Default: every finite measurement
-        with a positive uncertainty.
+        Measurements to use, same shape. By default, every finite
+        measurement with a positive uncertainty.
 
     Returns
     -------

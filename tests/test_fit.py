@@ -99,8 +99,8 @@ def test_raster_shape_is_kept(rng):
 
 
 def test_blend_with_its_own_fixed_width(rng):
-    # A narrow cool blend next to a broad target: with the blend's width
-    # fixed at its true value the target's width and velocity are recovered.
+    # A narrow cool blend next to a broad target. With the blend's width
+    # fixed at its true value, the target's width and velocity are recovered.
     lines = [Line(195.119, "Fe XII"), Line(195.25, "Fe VIII", width=0.02)]
     w = spectra(rng, lines, [300.0, 200.0], velocity=6.0, n=N, shifts=[0.0], widths=[0.035, 0.02])
     r = fit_single(w)
@@ -282,8 +282,9 @@ def test_options_are_checked():
 
 
 def test_fit_without_degrees_of_freedom_fails(rng):
-    # Target only: width, background, amplitude and velocity. Four spectral
-    # pixels leave no degree of freedom and the fit fails; five are enough.
+    # With the target only there are four parameters (width, background,
+    # amplitude and velocity), so four spectral pixels leave no degree of
+    # freedom and the fit fails; five are enough.
     w = spectra(rng, [Line(195.119, "Fe XII")], [200.0], velocity=0.0, n=2)
     centre = int(np.argmin(np.abs(w.wavelength - 195.119)))
     for row, n in ((0, 4), (1, 5)):

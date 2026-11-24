@@ -33,7 +33,7 @@ def read_dem(name, log_t_min=None):
     log_t_min : float, optional
         Set the DEM to zero below this log10 T. The CHIANTI DEMs rise
         steeply in the chromosphere, where the optically thin intensities
-        are not valid. Default: no cut.
+        are not valid. By default there is no cut.
 
     Returns
     -------
@@ -85,8 +85,8 @@ def line_intensities(ion, wavelength_range, log_t, dem=None, density=1e9, **ion_
     log_t : float or array_like
         log10 T in K: one temperature, or the temperature grid of `dem`.
     dem : array_like, optional
-        DEM in cm^-5 K^-1 on `log_t`. Default: the intensities at the one
-        temperature `log_t`.
+        DEM in cm^-5 K^-1 on `log_t`. By default, the intensities at the
+        one temperature `log_t`.
     density : float
         Electron density in cm^-3. Default 1e9.
     **ion_kwargs
@@ -172,8 +172,8 @@ def window_lines(ion, wavelength, half_width, log_t, dem=None, density=1e9,
     min_strength : float
         Faintest line to list, relative to the target. Default 0.05.
     blend_ions : list of str, optional
-        Ions to search for blends. Default: every ion in CHIANTI. Pass an
-        empty list for none.
+        Ions to search for blends. By default, every ion in CHIANTI. Pass
+        an empty list for none.
 
     Returns
     -------
